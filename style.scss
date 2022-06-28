@@ -1,0 +1,76 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+width: 100%;
+height: 100%;
+font-family: $ffam;
+font-size: $fsize;
+}
+
+@mixin flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.flex-row {
+    @include flex-row;
+}
+
+.container { 
+    width: $container-width;
+    margin: 3rem auto 0;
+    .header{
+     padding-inline: 1rem;
+    background-color: $soft-red;
+    height: 3.5rem;
+    border-radius: .5rem;
+    .header-text{
+        color: white;
+       :nth-child(1) {font-size: .7rem;}
+       :nth-child(2) {font-weight: 700; font-size: 1.3rem}
+    }
+   }
+   .main {
+    background-color: $cream;
+    border-radius: .5rem;
+    margin-top: 1.3rem;
+    padding: .7rem 1rem;
+    .title{
+        font-weight: 700;
+    }
+   }
+}
+
+#canvas {
+    margin-block: .7rem;
+    border-bottom: 1px solid grey;
+    padding-bottom: .5rem;
+}
+
+.botLeft {
+ :nth-child(1){
+    font-size: .7rem;
+ }
+ :nth-child(2){
+    font-weight: 700;
+    font-size: 1.3rem;
+ }
+}
+
+.botRight {
+    :nth-child(1n){
+       font-size: .7rem;
+    }
+    :nth-child(1){
+       font-weight: 700;
+       text-align: right;
+     }
+   }
